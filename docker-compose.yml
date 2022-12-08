@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  # mongo:
+  #   image: mongo:6.0
+  #   restart: always
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: password
+  #     MONGO_INITDB_DATABASE: nest_clean_arch
+  #   ports:
+  #     - 27017:27017
+  mysql:
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: nest_clean_arch
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - '3306:3306'
